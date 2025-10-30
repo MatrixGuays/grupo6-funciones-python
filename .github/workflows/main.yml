@@ -1,0 +1,33 @@
+test.yml 
+Con el siguiente contenido: 
+name: Pruebas automáticas del grupo 
+ 
+on: 
+  push: 
+    branches: 
+      - main 
+      - '*' 
+ 
+jobs: 
+  test: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Clonar el repositorio 
+        uses: actions/checkout@v3 
+ 
+      - name: Configurar Python 
+        uses: actions/setup-python@v4 
+        with: 
+          python-version: '3.10' 
+ 
+      - name: Instalar dependencias 
+        run: | 
+Metodología de Sistemas II 
+Prof. Rosalía Insaurralde 
+pip install pytest - name: Ejecutar pruebas 
+run: | 
+pytest -v 
+• Este flujo se ejecuta automáticamente cada vez que se hace un push a 
+cualquier rama ('*') o a main. 
+• Permite comprobar que todas las funciones del grupo funcionan 
+correctamente antes de fusionarlas. 
