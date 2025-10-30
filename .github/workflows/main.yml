@@ -1,5 +1,4 @@
-test.yml 
-Con el siguiente contenido: 
+
 name: Pruebas automáticas del grupo 
  
 on: 
@@ -22,12 +21,3 @@ jobs:
  
       - name: Instalar dependencias 
         run: | 
-Metodología de Sistemas II 
-Prof. Rosalía Insaurralde 
-pip install pytest - name: Ejecutar pruebas 
-run: | 
-pytest -v 
-• Este flujo se ejecuta automáticamente cada vez que se hace un push a 
-cualquier rama ('*') o a main. 
-• Permite comprobar que todas las funciones del grupo funcionan 
-correctamente antes de fusionarlas. 
